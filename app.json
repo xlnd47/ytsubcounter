@@ -1,0 +1,7 @@
+{
+    "name": "ytsubcounter",
+    "description": "Simple youtube counter for Niel",
+    "repository": "https://github.com/xlnd47/ytsubcounter",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node"]
+  }
