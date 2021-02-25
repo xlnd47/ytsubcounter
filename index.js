@@ -21,14 +21,18 @@ setIntervalAsync(
         let subcount = await getYoutubeSubscriber(process.env.YOUTUBE_CHANNEL_ID);
         db.get('counts')
             .push({ date: moment().format(), subcount: subcount})
-            .write()
+            .write();
+
+
     },
     process.env.POLLING_MINUTES * 60 * 1000 
 ); 
 
+
 app.get('/', (req, res) => {
-    res.send(dbJson)
+    res.send(db.get('counts').values())
 });
+
 app.listen(port, () => {
     console.log(`listening at port ${port}`)
 });
